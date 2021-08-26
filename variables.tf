@@ -49,7 +49,7 @@ variable "msk_tags" {
   type        = map
   default     = {}
   validation {
-    condition     = length(var.security_group_tags) > 0
+    condition     = length(var.msk_tags) > 0
     error_message = "Tags from MSK is empty."
   }
 }
