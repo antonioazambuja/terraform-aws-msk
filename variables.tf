@@ -19,7 +19,7 @@ variable "number_broker_nodes" {
   default     = 3
   validation {
     condition = var.number_broker_nodes >= 3
-    error_message = "Minimum number of broker nodes is 3"
+    error_message = "Number of broker nodes must be bigger than 3."
   }
 }
 
@@ -40,7 +40,7 @@ variable "subnets" {
   type        = list
   validation {
     condition = length(var.subnets) >= 3
-    error_message = "Minimum number of subnets is 3"
+    error_message = "Subnets from MSK cluster must be bigger than 3."
   }
 }
 
